@@ -1,0 +1,125 @@
+<section class="container main" data-aos="fade-up">
+    <div class="py-3">
+        <h2 class="heading-style" data-aos="fade-up">Contact</h2>
+    </div>
+    <div class="contact-section py-5">
+        <!-- Header -->
+        <div class="row mb-5 text-center">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-4 fw-bold mb-3" data-aos="fade-up">Get In Touch</h2>
+                <p class="lead text-muted" data-aos="fade-up">Let's discuss how we can work together to bring your ideas to life.</p>
+            </div>
+        </div>
+
+        <!-- Contact Info Cards -->
+        <div class="row g-4 mb-5 px-3">
+            <!-- Email Card -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm hover-card">
+                    <div class="card-body text-center p-4" data-aos="fade-up" data-delay="100">
+                        <div class="icon-wrapper mb-3" data-aos="fade-up">
+                            <fa-icon [icon]="faEnvelopeIcon" class="fa-2x" data-aos="fade-up"></fa-icon>
+                        </div>
+                        <h3 class="h5 mb-2" data-aos="fade-up">Email</h3>
+                        <p class="mb-0" data-aos="fade-up"><a href="mailto:jireldhiraj123@gmail.com"
+                                class="text-decoration-none">jireldhiraj123&#64;gmail.com</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Phone Card -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm hover-card">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-wrapper mb-3" data-aos="fade-up" data-delay="200">
+                            <fa-icon [icon]="faPhoneIcon" class="fa-2x" data-aos="fade-up"></fa-icon>
+                        </div>
+                        <h3 class="h5 mb-2" data-aos="fade-up">Phone</h3>
+                        <p class="mb-0" data-aos="fade-up"><a href="tel:9869550743" class="text-decoration-none">+977 9869550743</a></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Location Card -->
+            <div class="col-md-4">
+                <div class="card h-100 border-0 shadow-sm hover-card">
+                    <div class="card-body text-center p-4">
+                        <div class="icon-wrapper mb-3" data-aos="fade-up" data-delay="300">
+                            <fa-icon [icon]="faLocationDotIcon" class="fa-2x" data-aos="fade-up"></fa-icon>
+                        </div>
+                        <h3 class="h5 mb-2" data-aos="fade-up">Location</h3>
+                        <p class="mb-0" data-aos="fade-up">Kathmandu, Nepal</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="row justify-content-center" data-aos="fade-up" data-delay="400">
+            <div class="col-lg-8">
+                <div class="card border-0 shadow-lg">
+                    <div class="card-body p-4 p-md-5">
+                        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()">
+                            <div class="row g-4">
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="name" placeholder="Your Name"
+                                            formControlName="name"
+                                            [ngClass]="{'is-invalid': submitted && f['name'].errors}">
+                                        <label for="name">Your Name</label>
+                                        <div class="invalid-feedback" *ngIf="submitted && f['name'].errors">
+                                            Please enter your name
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-floating">
+                                        <input type="email" class="form-control" id="email"
+                                            placeholder="name@example.com" formControlName="email"
+                                            [ngClass]="{'is-invalid': submitted && f['email'].errors}">
+                                        <label for="email">Email Address</label>
+                                        <div class="invalid-feedback" *ngIf="submitted && f['email'].errors">
+                                            Please enter a valid email
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <input type="text" class="form-control" id="subject" placeholder="Subject"
+                                            formControlName="subject"
+                                            [ngClass]="{'is-invalid': submitted && f['subject'].errors}">
+                                        <label for="subject">Subject</label>
+                                        <div class="invalid-feedback" *ngIf="submitted && f['subject'].errors">
+                                            Please enter a subject
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <div class="form-floating">
+                                        <textarea class="form-control" id="message" placeholder="Your Message"
+                                            style="height: 160px" formControlName="message"
+                                            [ngClass]="{'is-invalid': submitted && f['message'].errors}"></textarea>
+                                        <label for="message">Your Message</label>
+                                        <div class="invalid-feedback" *ngIf="submitted && f['message'].errors">
+                                            Please enter your message
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary btn-lg w-100">
+                                        <fa-icon [icon]="faPaperPlaneIcon" class="me-2"></fa-icon>
+                                        Send Message
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

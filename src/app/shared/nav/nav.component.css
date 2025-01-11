@@ -1,0 +1,24 @@
+.navbar-toggler {
+    border: 1px solid var(--white-color) !important;
+  }
+  
+  .active {
+    color: var(--white-color) !important;
+    border-bottom: 1px solid var(--white-color) !important;
+  }
+  
+  .nav-link {
+    color: var(--white-color) !important;
+  }
+  
+  .nav-link:hover {
+    border-bottom: 1px solid var(--white-color) !important;
+  }
+  
+  .nav-item {
+    padding: 0 3px;
+  }
+  
+  .navbar-toggler-icon {
+    background-image: none !important;
+  }

@@ -1,0 +1,148 @@
+/* Custom CSS */
+.heading-style {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+}
+
+.heading-style:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 50px;
+    height: 3px;
+}
+
+.heading-style.text-center:after {
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Counter Section */
+.counter-box {
+    background: white;
+    transition: transform 0.3s ease;
+}
+
+.counter-box:hover {
+    transform: translateY(-5px);
+}
+
+/* Team Section */
+.team-member {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    padding: 20px 5px;
+}
+
+.team-member img {
+    border: 5px solid white;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.team-member:hover img {
+    transform: scale(1.05);
+}
+
+.social-links a {
+    transition: color 0.3s ease;
+    font-size: x-large;
+}
+
+.social-links a:hover {
+    color: var(--primary-color) !important;
+}
+
+/* Skills Section Styles */
+.skill-box {
+    padding: 1.5rem 1rem;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.skill-box:hover {
+    transform: translateY(-5px);
+}
+
+.skill-box i {
+    transition: transform 0.3s ease;
+}
+
+.skill-box:hover i {
+    transform: scale(1.1);
+}
+
+.skill-box p {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Custom colors */
+.text-purple {
+    color: #7952b3;
+}
+
+.text-pink {
+    color: #cd6799;
+}
+
+.text-indigo {
+    color: #4f5b93;
+}
+
+/* Testimonials Slider Styles */
+.testimonials-slider {
+    padding-bottom: 60px;
+}
+
+.swiper-slide {
+    height: auto;
+}
+
+.testimonial-card {
+    height: 100%;
+    background: white;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    color: var(--primary-color);
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--primary-color);
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .skills-category {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .skill-box {
+        padding: 1rem 0.5rem;
+    }
+    
+    .skill-box i {
+        font-size: 2em;
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .counter-box {
+        margin-bottom: 20px;
+    }
+    
+    .team-member {
+        margin-bottom: 30px;
+    }
+}

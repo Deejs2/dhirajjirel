@@ -1,0 +1,148 @@
+<!-- Header Section -->
+<header class="main bg-gradient py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-8">
+          <h1 class="display-4 fw-bold mb-2" data-aos="fade-up">Dhiraj Jirel</h1>
+          <h2 class="h4 text-muted mb-4" data-aos="fade-up">Junior Java Developer</h2>
+          <div class="d-flex gap-3 mb-4" data-aos="fade-up">
+            <a href="mailto:jireldhiraj123@gmail.com" class="text-decoration-none nav-link">
+              <fa-icon [icon]="faEnvelopeIcon" class="me-2"></fa-icon>jireldhiraj123&#64;gmail.com
+            </a>
+            <a href="tel:9869550743" class="text-decoration-none nav-link">
+              <fa-icon [icon]="faPhoneIcon" class="me-2"></fa-icon>+977 9869550743
+            </a>
+            <span>
+              <fa-icon [icon]="faLocationDotIcon" class="me-2"></fa-icon>Chabahil, Kathmandu
+            </span>
+          </div>
+          <div class="social-links" data-aos="fade-up">
+            <a href="https://github.com/Deejs2" class="me-3 text-decoration-none">
+              <fa-icon [icon]="faGithubIcon" size="lg"></fa-icon>
+            </a>
+            <a href="https://www.linkedin.com/in/dhiraj-j" class="me-3 text-decoration-none">
+              <fa-icon [icon]="faLinkedinIcon" size="lg"></fa-icon>
+            </a>
+            <a href="https://x.com/dhiraj_np" class="text-decoration-none">
+              <fa-icon [icon]="faTwitterIcon" size="lg"></fa-icon>
+            </a>
+            <a href="https://www.instagram.com/dhiraj07j" class="ms-3 text-decoration-none">
+              <fa-icon [icon]="faInstagramIcon" size="lg"></fa-icon>
+            </a>
+          </div>
+        </div>
+        <div class="col-lg-4 text-center mt-4 mt-lg-0" data-aos="fade-up">
+          <img src="assets/dhirajjirel-small.png" alt="Dhiraj Jirel Profile Picture Small Size" class="rounded-circle img-thumbnail shadow">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="py-5">
+    <div class="container">
+      <!-- About Section -->
+      <section class="mb-5">
+        <h3 class="section-title" data-aos="fade-up">
+          <fa-icon [icon]="faUserIcon" class="me-2"></fa-icon>Summary
+        </h3>
+        <div class="card border-0 shadow-sm">
+          <div class="card-body">
+            <p class="lead mb-0" data-aos="fade-up">
+                Passionate web developer in both front-end and back-end development. Proficient in a
+                wide range of technologies, from HTML/CSS, Bootstrap to Spring boot and databases. Committed
+                to delivering high-quality, scalable solutions.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Experience Section -->
+      <section class="mb-5">
+        <h3 class="section-title" data-aos="fade-up">
+          <fa-icon [icon]="faBriefcaseIcon" class="me-2"></fa-icon>Work Experience
+        </h3>
+        <div class="timeline">
+          <div class="card border-0 shadow-sm mb-4" data-aos="fade-up">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h4 class="h5 mb-0">Backend Java Developer</h4>
+                <span class="badge bg-primary">Dec 2023 - Present</span>
+              </div>
+              <h5 class="h6 text-muted mb-3">Aadim Innovation</h5>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-2">
+                  <fa-icon [icon]="faCheckIcon" class="me-2 text-primary"></fa-icon>
+                  Development of enterprise-level web applications using Angular, Spring Boot & PostgreSQL.
+                </li>
+                <li class="mb-2">
+                  <fa-icon [icon]="faCheckIcon" class="me-2 text-primary"></fa-icon>
+                  Implemented layered architecture (Controller->Service->Repository) for better code organization
+                </li>
+                <li>
+                  <fa-icon [icon]="faCheckIcon" class="me-2 text-primary"></fa-icon>
+                  Worked together with the team of developers to deliver high-quality software solutions
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="card border-0 shadow-sm" data-aos="fade-up">
+            <div class="card-body">
+              <div class="d-flex justify-content-between align-items-center mb-2">
+                <h4 class="h5 mb-0">PHP Developer Intern</h4>
+                <span class="badge bg-primary">August 2023 - September 2023</span>
+              </div>
+              <ul class="list-unstyled mb-0">
+                <li class="mb-2">
+                  <fa-icon [icon]="faCheckIcon" class="me-2 text-primary"></fa-icon>
+                  Learn and implement PHP & MySQL for web development
+                </li>
+                <li>
+                  <fa-icon [icon]="faCheckIcon" class="me-2 text-primary"></fa-icon>
+                  Learn Basic(CRUD) In Symfony framework for PHP development
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section class="mb-5">
+        <h3 class="section-title" data-aos="fade-up">
+          <fa-icon [icon]="faCodeIcon" class="me-2"></fa-icon>Skills
+        </h3>
+        <div class="row g-4">
+          <div class="col-md-6 col-lg-4" *ngFor="let category of skillCategories" data-aos="fade-up">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body">
+                <h4 class="h5 mb-3">{{category.name}}</h4>
+                <div class="d-flex flex-wrap gap-2">
+                  <span class="badge bg-light text-dark p-2" *ngFor="let skill of category.skills">
+                    {{skill}}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Education Section -->
+      <section class="mb-5">
+        <h3 class="section-title" data-aos="fade-up">
+          <fa-icon [icon]="faGraduationCapIcon" class="me-2"></fa-icon>Education
+        </h3>
+        <div class="card border-0 shadow-sm" data-aos="fade-up">
+          <div class="card-body">
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <h4 class="h5 mb-0">Bachelor of Computer Application</h4>
+              <span class="badge bg-primary">June 2022 - Present</span>
+            </div>
+            <h5 class="h6 text-muted">Aadim National College</h5>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>

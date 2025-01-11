@@ -1,0 +1,12 @@
+.icon-border {
+    border: 1px solid var(--primary-color);
+    border-radius: 50%;
+    padding: 5px 9px;
+    color: var(--primary-color);
+}
+
+.icon-border:hover {
+    background-color: var(--secondary-color);
+    color: white;
+    border: 1px solid var(--secondary-color);
+}
