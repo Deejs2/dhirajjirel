@@ -1,5 +1,5 @@
 [build]
-  publish = "dist/dhiraj/browser"
+  publish = "dist/dhiraj"
   command = "npx ng build --configuration production"
 
 [[redirects]]
