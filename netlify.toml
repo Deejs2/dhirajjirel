@@ -1,5 +1,5 @@
 [build]
-  base = dhiraj
+  base = "dhiraj"
   publish = "dist/browser"
   command = "npm run build:prod"
 
