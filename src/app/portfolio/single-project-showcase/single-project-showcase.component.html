@@ -55,7 +55,7 @@
             <h2 class="h4 mb-4" data-aos="fade-up">Screenshots</h2>
             <div class="row g-4">
               <div class="col-md-6" *ngFor="let screenshot of project.details.screenshots">
-                <img [src]="screenshot" class="img-fluid rounded shadow-sm" [alt]="project.title" data-aos="fade-up">
+                <img [src]="screenshot" class="img-fluid rounded shadow-sm" [alt]="extractAndCombine(screenshot, 'Dhiraj Jirel Project Screenshots')" data-aos="fade-up">
               </div>
             </div>
           </div>

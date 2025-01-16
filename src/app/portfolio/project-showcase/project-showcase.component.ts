@@ -23,7 +23,7 @@ export class ProjectShowcaseComponent implements OnInit {
 
   projects: Project[] = [
     {
-      id: 1,
+      id: "Kj2mN",
       title: 'School CMS',
       description: 'A School Management System with a focus on school or colleges website and student management.',
       image: 'assets/project-images/school-cms-cover.png',
@@ -52,7 +52,7 @@ export class ProjectShowcaseComponent implements OnInit {
       }
     },
     {
-      id: 2,
+      id: "9xPd4",
       title: 'BCA ProjectSathi',
       description: 'BCA ProjectSathi is a platform to personalized web development project assistance designed specifically for BCA students.',
       image: 'assets/project-images/bcaprojectsathi-img1.png',
@@ -79,7 +79,7 @@ export class ProjectShowcaseComponent implements OnInit {
       }
     },
     {
-      id: 3,
+      id: "L7cYp",
       title: 'CyberCafe',
       description: 'CyberCafe is an innovative Online Menu and Ordering System designed to revolutionize the dining experience in cafes and restaurants.',
       image: 'assets/project-images/cyber-cafe.png',
@@ -105,7 +105,7 @@ export class ProjectShowcaseComponent implements OnInit {
       }
     },
     {
-      id: 4,
+      id: "X4kUs",
       title: 'Blog CMS',
       description: 'A blog management system with a focus on blog website and post management.',
       image: 'assets/project-images/cms.png',
@@ -146,8 +146,19 @@ export class ProjectShowcaseComponent implements OnInit {
 
   filterProjects(category: string) {
     this.selectedCategory = category;
-    this.filteredProjects = category === 'all' 
-      ? this.projects 
+    this.filteredProjects = category === 'all'
+      ? this.projects
       : this.projects.filter(p => p.category === category);
+  }
+
+  extractAndCombine(path: string, personName: string): string {
+    if (!path) throw new Error('Path cannot be empty');
+    if (!personName) throw new Error('Person name cannot be empty');
+
+    const fileName = path.split('/').pop();
+    if (!fileName) throw new Error('Invalid path format');
+
+    const fileNameWithoutExtension = fileName.split('.').slice(0, -1).join('.');
+    return `${personName} : ${fileNameWithoutExtension}`;
   }
 }
