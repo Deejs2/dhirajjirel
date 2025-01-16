@@ -26,7 +26,7 @@ export class ProjectShowcaseComponent implements OnInit {
       id: 1,
       title: 'School CMS',
       description: 'A School Management System with a focus on school or colleges website and student management.',
-      image: '/assets/project-images/school-cms-cover.png',
+      image: 'assets/project-images/school-cms-cover.png',
       category: 'Angular & SpringBoot',
       technologies: ['Angular', 'SpringBoot', 'PostgreSQL', 'Bootstrap'],
       demoUrl: '',
@@ -44,10 +44,10 @@ export class ProjectShowcaseComponent implements OnInit {
           'Class and Exam Routine'
         ],
         screenshots: [
-          '/assets/project-images/school-cms-dashboard.png',
-          '/assets/project-images/school-cms-dashboard1.png',
-          '/assets/project-images/school-cms-theme-selection.png',
-          '/assets/project-images/school-cms.png'
+          'assets/project-images/school-cms-dashboard.png',
+          'assets/project-images/school-cms-dashboard1.png',
+          'assets/project-images/school-cms-theme-selection.png',
+          'assets/project-images/school-cms.png'
         ]
       }
     },
@@ -55,7 +55,7 @@ export class ProjectShowcaseComponent implements OnInit {
       id: 2,
       title: 'BCA ProjectSathi',
       description: 'BCA ProjectSathi is a platform to personalized web development project assistance designed specifically for BCA students.',
-      image: '/assets/project-images/bcaprojectsathi-img1.png',
+      image: 'assets/project-images/bcaprojectsathi-img1.png',
       category: 'Angular',
       technologies: ['Bootstrap', 'Angular', 'JavaScript'],
       demoUrl: 'https://bcaprojectsathi.com',
@@ -72,9 +72,9 @@ export class ProjectShowcaseComponent implements OnInit {
           'Project completion'
         ],
         screenshots: [
-          '/assets/project-images/bcaprojectsathi-img2.png',
-          '/assets/project-images/bcaprojectsathi-img3.png',
-          '/assets/project-images/bcaprojectsathi-img4.png',
+          'assets/project-images/bcaprojectsathi-img2.png',
+          'assets/project-images/bcaprojectsathi-img3.png',
+          'assets/project-images/bcaprojectsathi-img4.png',
         ]
       }
     },
@@ -82,7 +82,7 @@ export class ProjectShowcaseComponent implements OnInit {
       id: 3,
       title: 'CyberCafe',
       description: 'CyberCafe is an innovative Online Menu and Ordering System designed to revolutionize the dining experience in cafes and restaurants.',
-      image: '/assets/project-images/cyber-cafe.png',
+      image: 'assets/project-images/cyber-cafe.png',
       category: 'PHP & MySQL',
       technologies: ['Bootstrap', 'PHP', 'MySQL', 'JavaScript'],
       demoUrl: '',
@@ -98,9 +98,9 @@ export class ProjectShowcaseComponent implements OnInit {
           'Enhanced customer experience through technology integration',
         ],
         screenshots: [
-          '/assets/project-images/cyber-cafe1.png',
-          '/assets/project-images/cyber-cafe2.png',
-          '/assets/project-images/cyber-cafe3.png',
+          'assets/project-images/cyber-cafe1.png',
+          'assets/project-images/cyber-cafe2.png',
+          'assets/project-images/cyber-cafe3.png',
         ]
       }
     },
@@ -108,7 +108,7 @@ export class ProjectShowcaseComponent implements OnInit {
       id: 4,
       title: 'Blog CMS',
       description: 'A blog management system with a focus on blog website and post management.',
-      image: '/assets/project-images/cms.png',
+      image: 'assets/project-images/cms.png',
       category: 'PHP & MySQL',
       technologies: ['Bootstrap', 'PHP', 'MySQL', 'JavaScript'],
       demoUrl: '',
@@ -123,9 +123,9 @@ export class ProjectShowcaseComponent implements OnInit {
           'Dashboard for admin'
         ],
         screenshots: [
-          '/assets/project-images/cms1.png',
-          '/assets/project-images/cms2.png',
-          '/assets/project-images/cms3.png',
+          'assets/project-images/cms1.png',
+          'assets/project-images/cms2.png',
+          'assets/project-images/cms3.png',
         ]
       }
     }
