@@ -1,5 +1,5 @@
 [build]
-  publish = "dist/browser"
+  publish = "dist/dhiraj"
   command = "npm install --legacy-peer-deps && npm run build:prod"
 
 [[redirects]]
