@@ -1,6 +1,6 @@
 [build]
-  publish = "dist/dhiraj"
-  command = "npm install --legacy-peer-deps && npx ng build --configuration production"
+  publish = "dist/browser"
+  command = "npm run build:prod"
 
 [[redirects]]
   from = "/*"
