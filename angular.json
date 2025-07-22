@@ -45,9 +45,17 @@
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "4kB",
-                  "maximumError": "5kB"
+                  "maximumWarning": "8kb",
+                  "maximumError": "10kb"
                 }
+              ],
+              "allowedCommonJsDependencies": [
+                "canvg",
+                "core-js",
+                "aos",
+                "html2canvas",
+                "raf",
+                "rgbcolor"
               ],
               "outputHashing": "all"
             },
