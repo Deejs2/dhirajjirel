@@ -52,6 +52,35 @@ export class ProjectShowcaseComponent implements OnInit {
       }
     },
     {
+      id: "kj3h53",
+      title: 'College Hub Nepal',
+      description: 'A platform to connect students with colleges in Nepal, providing information on courses, admissions, and more.',
+      image: 'assets/project-images/college-hub-cover.png',
+      category: 'Angular & SpringBoot',
+      technologies: ['Angular', 'SpringBoot', 'PostgreSQL', 'Angular Material'],
+      demoUrl: 'https://collegehubnepal.com/',
+      githubUrl: 'https://github.com',
+      details: {
+        challenge: 'Creating a scalable and secure College Hub platform with real-time information on courses and admissions.',
+        solution: 'Implemented layered architecture with separate services for colleges, courses, and admissions.',
+        features: [
+          'User authentication and authorization',
+          'College and course management',
+          'Admission process management',
+          'Search and filter options for courses',
+          'Real-time notifications for students',
+          'User-friendly interface for easy navigation',
+          'Responsive design for mobile and desktop users'
+        ],
+        screenshots: [
+          'assets/project-images/college-hub-cover.png',
+          'assets/project-images/collegehub-s1.png',
+          'assets/project-images/collegehub-s2.png',
+          'assets/project-images/collegehub-s3.png'
+        ]
+      }
+    },
+    {
       id: "9xPd4",
       title: 'BCA ProjectSathi',
       description: 'BCA ProjectSathi is a platform to personalized web development project assistance designed specifically for BCA students.',

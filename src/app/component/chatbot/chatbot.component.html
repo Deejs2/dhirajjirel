@@ -1,0 +1,111 @@
+<div class="chatbot-toggle" 
+         (click)="toggleChat()" 
+         [class.active]="isOpen"
+         title="Portfolio Assistant">
+      <fa-icon [icon]="faComments" *ngIf="!isOpen"></fa-icon>
+      <fa-icon [icon]="faTimes" *ngIf="isOpen"></fa-icon>
+      <span class="notification-badge" *ngIf="hasNewMessages && !isOpen">{{unreadCount}}</span>
+    </div>
+
+    <!-- Chatbot Container -->
+    <div class="chatbot-container" [class.open]="isOpen">
+      <!-- Header -->
+      <div class="chatbot-header">
+        <div class="d-flex align-items-center">
+          <div class="bot-avatar me-2">
+            <fa-icon [icon]="faRobot"></fa-icon>
+          </div>
+          <div>
+            <h5 class="mb-0">Portfolio Assistant</h5>
+            <small class="text-white">
+              <span class="status-indicator"></span>
+              Online - Ready to help
+            </small>
+          </div>
+        </div>
+        <button class="btn btn-link text-white p-1" (click)="toggleChat()" title="Close">
+          <fa-icon [icon]="faTimes"></fa-icon>
+        </button>
+      </div>
+
+      <!-- Messages Area -->
+      <div class="chat-messages" #messagesContainer>
+        <!-- Welcome Message -->
+        <div class="bot-message-wrapper" *ngIf="messages.length === 1">
+          <div class="bot-message welcome-message">
+            <div class="typing-indicator mb-2">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="message-wrapper" *ngIf="i === 0">
+            <p class="mb-2">{{messages[0].content}}</p>
+            <p class="mb-3">I can help you learn about my skills, projects, and experience. Try asking:</p>
+          </div>
+            <div class="predefined-messages">
+              <button 
+                *ngFor="let predefined of predefinedMessages" 
+                class="btn btn-outline-primary btn-sm me-1 mb-2"
+                (click)="sendPredefinedMessage(predefined)">
+                <fa-icon [icon]="predefined.icon" class="me-1"></fa-icon>
+                {{predefined.text}}
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Regular Messages -->
+        <ng-container *ngFor="let message of messages; let i = index; trackBy: trackByMessage">
+          <div class="message-wrapper" *ngIf="i > 0">
+            <div [ngClass]="message.isUser ? 'user-message-wrapper' : 'bot-message-wrapper'">
+              <div [ngClass]="message.isUser ? 'user-message' : 'bot-message'">
+                <div class="message-content" [innerHTML]="formatMessage(message.content)"></div>
+                <small class="message-time">{{formatTime(message.timestamp)}}</small>
+              </div>
+            </div>
+          </div>
+        </ng-container>
+
+        <!-- Typing Indicator -->
+        <div class="bot-message-wrapper" *ngIf="isTyping">
+          <div class="bot-message typing-message">
+            <div class="typing-indicator">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Input Area -->
+      <div class="chat-input-container">
+        <div class="input-group">
+          <input 
+            type="text"
+            class="form-control chat-input"
+            [(ngModel)]="userMessage"
+            placeholder="Ask about skills, projects, experience..."
+            (keyup.enter)="sendMessage()"
+            [disabled]="isTyping"
+            #messageInput>
+          <button 
+            class="btn btn-primary send-btn"
+            (click)="sendMessage()"
+            [disabled]="!userMessage.trim() || isTyping">
+            <fa-icon [icon]="faPaperPlane" *ngIf="!isTyping"></fa-icon>
+            <div class="spinner-border spinner-border-sm" role="status" *ngIf="isTyping">
+              <span class="visually-hidden">Loading...</span>
+            </div>
+          </button>
+        </div>
+        <div class="quick-actions mt-2" *ngIf="messages.length > 0">
+          <button 
+            *ngFor="let action of quickActions" 
+            class="btn btn-outline-secondary btn-sm me-1"
+            (click)="sendQuickMessage(action.message)">
+            {{action.text}}
+          </button>
+        </div>
+      </div>
+    </div>

@@ -1,10 +1,11 @@
 <!-- Header Section -->
-<header class="main bg-gradient py-5">
+<div #resumeContent>
+  <header class="main bg-gradient py-5">
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-8">
           <h1 class="display-4 fw-bold mb-2" data-aos="fade-up">Dhiraj Jirel</h1>
-          <h2 class="h4 text-muted mb-4" data-aos="fade-up">Junior Java Developer</h2>
+          <h2 class="h4 text-muted mb-4" data-aos="fade-up">Web Developer</h2>
           <div class="d-flex gap-3 mb-4" data-aos="fade-up">
             <a href="mailto:jireldhiraj123@gmail.com" class="text-decoration-none nav-link">
               <fa-icon [icon]="faEnvelopeIcon" class="me-2"></fa-icon>jireldhiraj123&#64;gmail.com
@@ -13,9 +14,21 @@
               <fa-icon [icon]="faPhoneIcon" class="me-2"></fa-icon>+977 9869550743
             </a>
             <span>
-              <fa-icon [icon]="faLocationDotIcon" class="me-2"></fa-icon>Chabahil, Kathmandu
+              <fa-icon [icon]="faLocationDotIcon" class="me-2"></fa-icon>Kumarigal, Boudha, Kathmandu, 44600
             </span>
           </div>
+          <div class="mb-3" data-aos="fade-up">
+            <a href="https://www.dhirajjirel.com.np" class="text-decoration-none nav-link">
+              <fa-icon [icon]="faGlobeIcon" class="me-2"></fa-icon>www.dhirajjirel.com.np
+            </a>
+          </div>
+          <!-- Hide download button in PDF -->
+          <div class="d-flex gap-3 mb-4 d-print-none" data-aos="fade-up" id="downloadBtn">
+            <button (click)="downloadPDF()" class="btn btn-primary">
+              <fa-icon [icon]="faDownloadIcon" class="me-2"></fa-icon>Download PDF
+            </button>
+          </div>
+
           <div class="social-links" data-aos="fade-up">
             <a href="https://github.com/Deejs2" class="me-3 text-decoration-none">
               <fa-icon [icon]="faGithubIcon" title="Dhiraj Jirel Github Profile" size="lg"></fa-icon>
@@ -32,7 +45,8 @@
           </div>
         </div>
         <div class="col-lg-4 text-center mt-4 mt-lg-0" data-aos="fade-up">
-          <img src="assets/dhirajjirel-small.png" alt="Dhiraj Jirel Profile Picture Small Size" class="rounded-circle img-thumbnail shadow">
+          <img src="assets/dhirajjirel-small.png" alt="Dhiraj Jirel Profile Picture Small Size"
+            class="rounded-circle img-thumbnail shadow">
         </div>
       </div>
     </div>
@@ -49,10 +63,28 @@
         <div class="card border-0 shadow-sm">
           <div class="card-body">
             <p class="lead mb-0" data-aos="fade-up">
-                Passionate web developer in both front-end and back-end development. Proficient in a
-                wide range of technologies, from HTML/CSS, Bootstrap to Spring boot and databases. Committed
-                to delivering high-quality, scalable solutions.
+              Web Developer with more than a year of experience in Angular and Spring Boot development.
+              Skilled in building responsive web applications with a focus on frontend design and backend
+              development. Strong team collaborator dedicated to delivering scalable and user-friendly
+              solutions.
             </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Highlights Section -->
+      <section class="mb-5">
+        <h3 class="section-title" data-aos="fade-up">
+          <fa-icon [icon]="faStarIcon" class="me-2"></fa-icon>Highlights
+        </h3>
+        <div class="row g-3">
+          <div class="col-md-6" *ngFor="let highlight of highlights" data-aos="fade-up">
+            <div class="card border-0 shadow-sm h-100">
+              <div class="card-body">
+                <fa-icon [icon]="faCheckIcon" class="me-2 text-primary"></fa-icon>
+                {{highlight}}
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -66,22 +98,30 @@
           <div class="card border-0 shadow-sm mb-4" data-aos="fade-up">
             <div class="card-body">
               <div class="d-flex justify-content-between align-items-center mb-2">
-                <h4 class="h5 mb-0">Backend Java Developer</h4>
-                <span class="badge bg-primary">Dec 2023 - Present</span>
+                <h4 class="h5 mb-0">Software Developer Intern</h4>
+                <span class="badge bg-primary">December 2023 - 2025</span>
               </div>
-              <h5 class="h6 text-muted mb-3">Aadim Innovation</h5>
+              <h5 class="h6 text-muted mb-3">Aadim Innovation, Chabahil, Kathmandu</h5>
               <ul class="list-unstyled mb-0">
                 <li class="mb-2">
                   <fa-icon [icon]="faCheckIcon" class="me-2 text-primary"></fa-icon>
-                  Development of enterprise-level web applications using Angular, Spring Boot & PostgreSQL.
+                  Developed and maintained full-stack web applications using Angular and Spring Boot
                 </li>
                 <li class="mb-2">
                   <fa-icon [icon]="faCheckIcon" class="me-2 text-primary"></fa-icon>
-                  Implemented layered architecture (Controller->Service->Repository) for better code organization
+                  Designed and implemented RESTful APIs and database schemas based on project requirements
+                </li>
+                <li class="mb-2">
+                  <fa-icon [icon]="faCheckIcon" class="me-2 text-primary"></fa-icon>
+                  Integrated frontend components with backend services, ensuring seamless data flow
+                </li>
+                <li class="mb-2">
+                  <fa-icon [icon]="faCheckIcon" class="me-2 text-primary"></fa-icon>
+                  Collaborated with development team to deliver high-quality software solutions
                 </li>
                 <li>
                   <fa-icon [icon]="faCheckIcon" class="me-2 text-primary"></fa-icon>
-                  Worked together with the team of developers to deliver high-quality software solutions
+                  Wrote clean, well-documented code following best practices and coding standards
                 </li>
               </ul>
             </div>
@@ -96,11 +136,15 @@
               <ul class="list-unstyled mb-0">
                 <li class="mb-2">
                   <fa-icon [icon]="faCheckIcon" class="me-2 text-primary"></fa-icon>
-                  Learn and implement PHP & MySQL for web development
+                  Developed CRUD applications using Symfony framework and PHP
+                </li>
+                <li class="mb-2">
+                  <fa-icon [icon]="faCheckIcon" class="me-2 text-primary"></fa-icon>
+                  Implemented database solutions using MySQL for web applications
                 </li>
                 <li>
                   <fa-icon [icon]="faCheckIcon" class="me-2 text-primary"></fa-icon>
-                  Learn Basic(CRUD) In Symfony framework for PHP development
+                  Gained hands-on experience in modern PHP development practices
                 </li>
               </ul>
             </div>
@@ -108,13 +152,13 @@
         </div>
       </section>
 
-      <!-- Skills Section -->
+      <!-- Technical Skills Section -->
       <section class="mb-5">
         <h3 class="section-title" data-aos="fade-up">
-          <fa-icon [icon]="faCodeIcon" class="me-2"></fa-icon>Skills
+          <fa-icon [icon]="faCodeIcon" class="me-2"></fa-icon>Technical Skills
         </h3>
         <div class="row g-4">
-          <div class="col-md-6 col-lg-4" *ngFor="let category of skillCategories" data-aos="fade-up">
+          <div class="col-md-6 col-lg-3" *ngFor="let category of skillCategories" data-aos="fade-up">
             <div class="card border-0 shadow-sm h-100">
               <div class="card-body">
                 <h4 class="h5 mb-3">{{category.name}}</h4>
@@ -138,11 +182,12 @@
           <div class="card-body">
             <div class="d-flex justify-content-between align-items-center mb-2">
               <h4 class="h5 mb-0">Bachelor of Computer Application</h4>
-              <span class="badge bg-primary">June 2022 - Present</span>
+              <span class="badge bg-primary">Current Semester: 6th</span>
             </div>
-            <h5 class="h6 text-muted">Aadim National College</h5>
+            <h5 class="h6 text-muted">Aadim National College, Chabahil, Kathmandu</h5>
           </div>
         </div>
       </section>
     </div>
   </main>
+</div>
