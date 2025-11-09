@@ -55,10 +55,10 @@ export class SingleProjectShowcaseComponent implements OnInit {
           'Class and Exam Routine'
         ],
         screenshots: [
-          'assets/project-images/school-cms-dashboard.png',
-          'assets/project-images/school-cms-dashboard1.png',
-          'assets/project-images/school-cms-theme-selection.png',
-          'assets/project-images/school-cms.png'
+          '../assets/project-images/school-cms-dashboard.png',
+          '../assets/project-images/school-cms-dashboard1.png',
+          '../assets/project-images/school-cms-theme-selection.png',
+          '../assets/project-images/school-cms.png'
         ]
       }
     },
@@ -113,13 +113,13 @@ export class SingleProjectShowcaseComponent implements OnInit {
           'Backend: User progress management and persistence'
         ],
         screenshots: [
-          'assets/project-images/mazemaster-landing-page.png',
-          'assets/project-images/mazemaster-level-page.png',
-          'assets/project-images/mazemaster-leaderboard.png',
-          'assets/project-images/mazemaster-profile.png',
-          'assets/project-images/mazemaster-login.png',
-          'assets/project-images/mazemaster-register.png',
-          'assets/project-images/mazemaster-email-verification.png'
+          '../assets/project-images/mazemaster-landing-page.png',
+          '../assets/project-images/mazemaster-level-page.png',
+          '../assets/project-images/mazemaster-leaderboard.png',
+          '../assets/project-images/mazemaster-profile.png',
+          '../assets/project-images/mazemaster-login.png',
+          '../assets/project-images/mazemaster-register.png',
+          '../assets/project-images/mazemaster-email-verification.png'
         ]
       }
     },
