@@ -84,10 +84,10 @@ export class SingleProjectShowcaseComponent implements OnInit {
           'Responsive design for mobile and desktop users'
         ],
         screenshots: [
-          'assets/project-images/college-hub-cover.png',
-          'assets/project-images/collegehub-s1.png',
-          'assets/project-images/collegehub-s2.png',
-          'assets/project-images/collegehub-s3.png'
+          '../assets/project-images/college-hub-cover.png',
+          '../assets/project-images/collegehub-s1.png',
+          '../assets/project-images/collegehub-s2.png',
+          '../assets/project-images/collegehub-s3.png'
         ]
       }
     },
@@ -144,9 +144,9 @@ export class SingleProjectShowcaseComponent implements OnInit {
           'Project completion'
         ],
         screenshots: [
-          'assets/project-images/bcaprojectsathi-img2.png',
-          'assets/project-images/bcaprojectsathi-img3.png',
-          'assets/project-images/bcaprojectsathi-img4.png',
+          '../assets/project-images/bcaprojectsathi-img2.png',
+          '../assets/project-images/bcaprojectsathi-img3.png',
+          '../assets/project-images/bcaprojectsathi-img4.png',
         ]
       }
     },
@@ -170,9 +170,9 @@ export class SingleProjectShowcaseComponent implements OnInit {
           'Enhanced customer experience through technology integration',
         ],
         screenshots: [
-          'assets/project-images/cyber-cafe1.png',
-          'assets/project-images/cyber-cafe2.png',
-          'assets/project-images/cyber-cafe3.png',
+          '../assets/project-images/cyber-cafe1.png',
+          '../assets/project-images/cyber-cafe2.png',
+          '../assets/project-images/cyber-cafe3.png',
         ]
       }
     },
@@ -195,9 +195,9 @@ export class SingleProjectShowcaseComponent implements OnInit {
           'Dashboard for admin'
         ],
         screenshots: [
-          'assets/project-images/cms1.png',
-          'assets/project-images/cms2.png',
-          'assets/project-images/cms3.png',
+          '../assets/project-images/cms1.png',
+          '../assets/project-images/cms2.png',
+          '../assets/project-images/cms3.png',
         ]
       }
     }
