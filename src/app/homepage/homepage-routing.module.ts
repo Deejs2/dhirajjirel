@@ -11,7 +11,7 @@ const routes: Routes = [
   {path: '', component: HomepageComponent , children: [
     {path: '', component: HomeComponent},
     {path: 'about', component: AboutComponent},
-    {path: 'resume', component: ResumeComponent},
+    // {path: 'resume', component: ResumeComponent},
     {path: 'services', component: ServiceComponent},
     {path: 'contact', component: ContactComponent},
     {path: 'portfolio', loadChildren: () => import('../portfolio/portfolio.module').then(m => m.PortfolioModule)}

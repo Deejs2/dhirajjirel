@@ -28,7 +28,8 @@ export class HomeComponent implements OnInit {
   }
 
   onClickResume() {
-    this.router.navigate(['/resume']);
+    // here i have pdf file of resume in assets folder
+    window.open('assets/pdf/Dhiraj Jirel.pdf', '_blank');
   }
 
 }

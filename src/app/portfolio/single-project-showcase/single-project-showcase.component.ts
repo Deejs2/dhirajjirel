@@ -92,6 +92,38 @@ export class SingleProjectShowcaseComponent implements OnInit {
       }
     },
     {
+      id: "mj4h83",
+      title: 'MAZEMASTER: PATHFINDER\'S ADVENTURE GAME USING BFS',
+      description: 'An interactive pathfinding adventure game that implements Breadth-First Search algorithm to find optimal paths through complex mazes.',
+      image: 'assets/project-images/mazemaster-cover.png',
+      category: 'Angular & SpringBoot',
+      technologies: ['Angular', 'SpringBoot', 'PostgreSQL', 'Bootstrap'],
+      demoUrl: '',
+      githubUrl: 'https://github.com/Deejs2/mazemaster-ui',
+      details: {
+        challenge: 'MAZEMASTER is a game development project that challenges users to solve mazes using BFS. The game features multiple levels, animated pathfinding, and a scoring system. The backend manages user progress and maze generation.',
+        solution: 'Implemented a responsive frontend with animated maze visualization and an efficient backend responsible for procedural maze generation, BFS pathfinding, and user progress persistence.',
+        features: [
+          'Frontend: Animated maze visualization',
+          'Frontend: Level selection and progression',
+          'Frontend: Score tracking and leaderboard',
+          'Frontend: Responsive design for desktop and mobile',
+          'Backend: Procedural maze generation algorithm',
+          'Backend: Breadth-First Search implementation for pathfinding',
+          'Backend: User progress management and persistence'
+        ],
+        screenshots: [
+          'assets/project-images/mazemaster-landing-page.png',
+          'assets/project-images/mazemaster-level-page.png',
+          'assets/project-images/mazemaster-leaderboard.png',
+          'assets/project-images/mazemaster-profile.png',
+          'assets/project-images/mazemaster-login.png',
+          'assets/project-images/mazemaster-register.png',
+          'assets/project-images/mazemaster-email-verification.png'
+        ]
+      }
+    },
+    {
       id: "9xPd4",
       title: 'BCA ProjectSathi',
       description: 'BCA ProjectSathi is a platform to personalized web development project assistance designed specifically for BCA students.',
